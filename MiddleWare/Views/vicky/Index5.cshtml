@@ -1,0 +1,42 @@
+﻿@model MiddleWare.Models.Student
+
+@{
+    ViewData["Title"] = "Index5";
+}
+
+<h2>Index5</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudentName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudentAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudentEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentPhoneNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudentPhoneNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

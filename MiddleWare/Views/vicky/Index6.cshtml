@@ -1,0 +1,90 @@
+﻿@using MiddleWare.Models
+@model Tuple<Student, College>
+
+@{
+    ViewData["Title"] = "Index6";
+}
+
+<h2>Index6</h2>
+
+<div>
+    <h4>College</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <table border="1" align="center" style="text-align:center;">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item2.CollegeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item2.CollegeAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item2.CollegeEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item2.CollegePhoneNumber)
+                </th>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Item2.CollegeName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Item2.CollegeAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Item2.CollegeEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Item2.CollegePhoneNumber)
+                </td>
+            </tr>
+
+        </table>
+    </dl>
+</div>
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <table border="1" align="center" style="text-align:center;">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item1.StudentName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item1.StudentAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item1.StudentEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Item1.StudentPhoneNumber)
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Item1.StudentName)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.Item1.StudentAddress)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.Item1.StudentEmail)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.Item1.StudentPhoneNumber)
+                </td>
+            </tr>
+        </table>    
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

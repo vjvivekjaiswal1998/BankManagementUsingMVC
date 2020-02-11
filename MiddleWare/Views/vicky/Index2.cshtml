@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Index2";
+}
+
+<h2>Index2</h2>
+<html>
+<body>
+    <div>
+        <h1>
+
+            value this is from tempdata - @TempData["mykey"]
+            @TempData["mykey"]
+            @{TempData.Keep("mykey");}
+
+        </h1>
+    </div>
+</body>
+</html>

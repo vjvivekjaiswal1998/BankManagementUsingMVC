@@ -1,0 +1,43 @@
+﻿@page
+@using MiddleWare.Controllers
+@model VrazorpageModel
+@{
+}
+
+
+<h2>This is Separate(Razor view) page model</h2>
+@{
+    var date = DateTime.Now.ToShortDateString();
+    var message = "Hello World";
+}
+
+<h2>Today's date is: @date </h2>
+<h3>@message</h3>
+
+@if (DateTime.IsLeapYear(DateTime.Now.Year))
+{
+    @DateTime.Now.Year @:is a leap year.
+}
+else
+{
+    @DateTime.Now.Year @:is not a leap year.
+}
+
+@{
+    <br />
+    string str = "Hello vivek!";
+
+    @for (var i = 1; i < 5; i++)
+    {
+
+        @str
+        <br />
+    }
+}
+
+<p>@str</p>
+
+@for (int i = 0; i < 5; i++)
+{
+    @i.ToString()<br />
+}

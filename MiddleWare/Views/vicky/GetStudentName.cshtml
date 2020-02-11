@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "GetStudentName";
+}
+
+<h2>GetStudentName</h2>
+
+<h2>Index4 data from 1st index @TempData["mykey"]</h2>
+<ul>
+    @foreach (var student in @ViewData["students"] as List<string>)
+    {
+        <li>
+            @student
+        </li>
+    }
+</ul>

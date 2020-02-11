@@ -1,0 +1,60 @@
+﻿@model MiddleWare.Models.College
+
+@{
+    ViewData["Title"] = "Index12";
+}
+
+<h2>Index12</h2>
+
+<h4>College</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index12">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CollegeName" class="control-label"></label>
+                <input asp-for="CollegeName" class="form-control" />
+                <span asp-validation-for="CollegeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CollegeAddress" class="control-label"></label>
+                <input asp-for="CollegeAddress" class="form-control" />
+                <span asp-validation-for="CollegeAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CollegeEmail" class="control-label"></label>
+                <input asp-for="CollegeEmail" class="form-control" />
+                <span asp-validation-for="CollegeEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CollegePhoneNumber" class="control-label"></label>
+                <input asp-for="CollegePhoneNumber" class="form-control" />
+                <span asp-validation-for="CollegePhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+ CustomerName:<br>
+<input type="text" name="CustomerName"><br>
+    CustomerAddress:<br>
+<input type="text" name="CustomerAddress"><br>
+    CustomerEmail:<br>
+<input type="text" name="CustomerEmail"><br>
+    CustomerPhoneNumber:<br>
+<input type="text" name="CustomerPhoneNumber"><br>
+
+
+<input type="radio" name="gender" value="Saving" checked> Saving<br>
+<input type="radio" name="gender" value="Current"> Current<br>
+
+
+<input type="submit" value="Submit">
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

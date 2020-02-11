@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<style>
+    body {
+        background-image: url('/images/pe.jpg') ;
+    } 
+</style>
+
+
+<body >             
+    <p>
+        <h2 style="color:aqua">(Vivek R Jaiswal)</h2>
+
+        <h2 >(This is view bag)<br />  @ViewBag.welcome</h2>
+        <h1>(This is view data)<br /> @ViewData["Message"]</h1>
+        <h2>(This is temp data)<br /> @TempData["mykey"]</h2>
+
+        <h1>
+            @{
+                String currTime = TempData.Peek("CurrTime").ToString();
+            }@currTime;
+        </h1>
+
+        <img src="~/images/cube123.jpg" height="250" width="400" />
+    </p>
+</body>
+
+
+

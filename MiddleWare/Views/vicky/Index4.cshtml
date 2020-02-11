@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MiddleWare.Models.Student>
+
+@{
+    ViewData["Title"] = "Index4";
+}
+
+<h2>Index4</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <i>
+
+            <table border="1" align="center" style="text-align:center;">
+
+                <b>
+                    <tr >
+                        <th style="text-align:center" width="100px">
+                            @Html.DisplayNameFor(model => model.StudentName)
+                        </th>
+                        <th style="text-align:center" width="100px">
+                            @Html.DisplayNameFor(model => model.StudentAddress)
+                        </th>
+                        <th style="text-align:center" width="200px">
+                            @Html.DisplayNameFor(model => model.StudentEmail)
+                        </th>
+                        <th style="text-align:center" width="100px">
+                            @Html.DisplayNameFor(model => model.StudentPhoneNumber)
+                        </th>
+                    </tr>
+                </b>
+                @foreach (var _model in Model)
+
+                {
+                    <tr>
+                        <td width="100px">
+                            @Html.DisplayFor(model => _model.StudentName)
+                        </td>
+
+                        <td width="100px">
+                            @Html.DisplayFor(model => _model.StudentAddress)
+                        </td>
+
+                        <td width="200px">
+                            @Html.DisplayFor(model => _model.StudentEmail)
+                        </td>
+
+                        <td width="100px">
+                            @Html.DisplayFor(model => _model.StudentPhoneNumber)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </i>
+    </dl>
+</div>
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

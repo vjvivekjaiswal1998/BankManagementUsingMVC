@@ -1,0 +1,72 @@
+﻿@model IEnumerable<BankManagement.DTO.BankDetail>
+
+@{
+    ViewData["Title"] = "ShowAllBankDetail";
+}
+
+<h2>ShowAllBankDetail</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomieeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerPhoneNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomieeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerPhoneNumber)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "UpdatebankDetail", new { item.AccountNumber, item.CustomerEmail, item.CustomerPhoneNumber }) |
+                @Html.ActionLink("Details", "GetBankDetail", new { item.AccountNumber }) |
+                @Html.ActionLink("Delete", "DeleteBankDetail", new { item.AccountNumber })
+                @Html.ActionLink("Add", "AddBankDetail", new {})
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

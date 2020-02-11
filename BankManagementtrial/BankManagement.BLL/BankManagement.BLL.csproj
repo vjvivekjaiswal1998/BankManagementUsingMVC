@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BankManagement.DAL\BankManagement.DAL.csproj" />
+    <ProjectReference Include="..\BankManagement.DTO\BankManagement.DTO.csproj" />
+  </ItemGroup>
+
+</Project>
